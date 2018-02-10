@@ -14,7 +14,7 @@ class CarouselContainer extends Component {
             : "carousel-container"
         }
       >
-        <a href={'http://' + carousel.link}>
+        <a href={'http://' + carousel.link} target="_blank">
           <img src={img_src} />
         </a>
         <span className="title">{carousel.title}</span>
