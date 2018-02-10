@@ -20,8 +20,15 @@ export default class Carousel extends Component {
 
     this.mouseEnter = this.mouseEnter.bind(this);
     this.mouseLeave = this.mouseLeave.bind(this);
+    this.startAutoCarousel();
+  }
 
-    
+  componentWillUnMount(){
+    this.stopAutoCarousel();
+  }
+
+  switchItem(){
+    this.moveToNext();
   }
 
   goToItem(index) {
@@ -50,7 +57,10 @@ export default class Carousel extends Component {
 
   goToNext(e) {
     e.preventDefault();
+    this.moveToNext();
+  }
 
+  moveToNext(){
     let index = this.state.activeIndex;
     let {carousels} = this.props;
     let carouselsLength = carousels.length - 1;
@@ -67,11 +77,24 @@ export default class Carousel extends Component {
   }
 
   mouseEnter(){
-    this.setState({isMouseInside: true});
+    this.setState({isMouseInside: true});   
+    this.stopAutoCarousel(); 
   }
 
   mouseLeave(){
     this.setState({isMouseInside: false});
+    this.startAutoCarousel();
+  }
+
+  stopAutoCarousel(){
+    clearInterval(this.runCarousel);
+  }
+
+  startAutoCarousel(){
+    this.runCarousel = setInterval(
+      () => {
+        this.switchItem();                
+      }, 1000);
   }
 
   render() {
