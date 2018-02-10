@@ -5,6 +5,8 @@ import {Provider} from 'react-redux';
 import {Router, browserHistory} from 'react-router';
 import routes from './routes';
 import {loadCarousels} from './actions/carouselActions';
+import './styles/styles.css';
+
 
 const store = configureStore();
 store.dispatch(loadCarousels());
