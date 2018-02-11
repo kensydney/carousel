@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CarouseTrack Snapshot capturing Snapshot of CarouselTrack 1`] = `
+<li>
+  <div
+    className="carousel-track-container"
+  >
+    <a
+      className="carousel-track carousel-track-active"
+      onClick={undefined}
+    />
+  </div>
+</li>
+`;
