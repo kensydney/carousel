@@ -11,6 +11,7 @@ ul {
   position: relative;
   max-width:768px;
   margin: auto;
+  margin-top:50px;
 }
 
 .carousel-container {
@@ -29,7 +30,7 @@ ul {
 
 .carousel-arrow {
   position: absolute;
-  top: 50%;
+  top: 100px;
   display: block;
   color: #111;
   cursor: pointer;
@@ -84,7 +85,6 @@ ul {
 }
 
 .carousel-container .synosis{
-    position:absolute;
     padding:5px;
     background-color:#F2F2F2;
     max-height: 256px;
@@ -92,7 +92,6 @@ ul {
     overflow: hidden;
     text-overflow:ellipsis;
     display:block;
-    width:600px;
 }
 
 .carousel-container .synosis:hover{
